@@ -27,7 +27,7 @@ _lens:
 	lensss:
 	sub sp,fp,#4
 	pop {fp,pc}
-putss:
+_putss:
 	@ r0=string
 	push {fp,lr}
 	add fp,sp,#4
@@ -38,7 +38,7 @@ putss:
 	blx r3
 	mov r2,r0
 	mov r0, #1            
-	ldr r1,r7
+	mov r1,r7
 	mov r7, #4              
 	swi #0                  
 	sub sp,fp,#4
